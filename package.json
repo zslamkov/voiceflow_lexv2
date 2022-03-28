@@ -1,0 +1,33 @@
+{
+  "name": "voiceflow_lexv2",
+  "version": "1.0.0",
+  "description": "Connecting Lex V2 to the Voiceflow Dialog Manager as a custom NLU",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Zoran Slamkov",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zslamkov/voiceflow_lexv2"
+  },
+  "homepage": "https://github.com/zslamkov/voiceflow_lexv2",
+  "keywords": [
+    "nodejs",
+    "voiceflow",
+    "bot",
+    "lex v2",
+    "javascript"
+  ],
+  "type": "module",
+  "dependencies": {
+    "aws4-axios": "^2.4.9",
+    "axios": "^0.26.1",
+    "cli-ux": "^6.0.9",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.11.0"
+  }
+}
