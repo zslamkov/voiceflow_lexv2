@@ -45,7 +45,7 @@ client.interceptors.request.use(interceptor);
 
 ## Retrieve Intent Data
 
-We will be sending an unstructured utterance to the Lex V2 `RequestText` endpoint in order to receive a response with:
+We will be sending an unstructured utterance to the Lex V2 [`RecognizeText`](https://docs.aws.amazon.com/lexv2/latest/dg/API_runtime_RecognizeText.html) endpoint in order to receive a response with:
 1. The triggered intent name
 2. Entity key/values
 3. Confidence score
