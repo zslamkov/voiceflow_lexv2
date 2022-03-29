@@ -41,6 +41,7 @@ async function detectIntent(textInput, sessionID) {
 
   const intent = response.data.interpretations[0].intent.name;
   const entities = response.data.interpretations[0].intent.slots;
+  const nluConfidence = response.data.interpretations[0].nluConfidence.score;
 
   const createIntent = (name, value) => ({ name, value });
   const arr = [];
@@ -52,7 +53,7 @@ async function detectIntent(textInput, sessionID) {
     }
   }
 
-  return { response: intent, entities: arr };
+  return { response: intent, entities: arr, confidence: nluConfidence };
 }
 
 async function interact(userID, request) {
@@ -103,6 +104,7 @@ async function main() {
           name: intent.response,
         },
         entities: intent.entities,
+        confidence: intent.confidence,
       },
     });
   }
